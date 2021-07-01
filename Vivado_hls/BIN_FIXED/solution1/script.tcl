@@ -5,11 +5,11 @@
 ############################################################
 open_project BIN_FIXED
 set_top estimate_FR
-add_files Compiled_Code/FRbin_fixed.cpp
 add_files Compiled_Code/FRbin_fixed.h
-add_files -tb FRbin.dat
-add_files -tb Compiled_Code/FRbin_fixed_test.cpp
-add_files -tb SpksTime.dat
+add_files Compiled_Code/FRbin_fixed.cpp
+add_files -tb SpksTime.dat -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb Compiled_Code/FRbin_fixed_test.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb FRbin.dat -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020clg484-1} -tool vivado
 create_clock -period 10 -name default

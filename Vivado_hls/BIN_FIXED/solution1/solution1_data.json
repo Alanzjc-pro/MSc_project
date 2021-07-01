@@ -51,7 +51,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "31401",
+    "Latency": "30401",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -69,12 +69,10 @@
   "Files": {
     "CSource": ["..\/..\/Compiled_Code\/FRbin_fixed.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/estimate_FR_mul_80ns_82ns_161_5_1.vhd",
       "impl\/vhdl\/estimate_FR_mul_mul_8ns_14ns_22_1_1.vhd",
       "impl\/vhdl\/estimate_FR.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/estimate_FR_mul_80ns_82ns_161_5_1.v",
       "impl\/verilog\/estimate_FR_mul_mul_8ns_14ns_22_1_1.v",
       "impl\/verilog\/estimate_FR.v"
     ],
@@ -223,10 +221,10 @@
       }},
     "Metrics": {"estimate_FR": {
         "Latency": {
-          "LatencyBest": "31401",
-          "LatencyAvg": "31401",
-          "LatencyWorst": "31401",
-          "PipelineII": "31402",
+          "LatencyBest": "30401",
+          "LatencyAvg": "30401",
+          "LatencyWorst": "30401",
+          "PipelineII": "30402",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -238,9 +236,9 @@
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "200",
-            "Latency": "31400",
+            "Latency": "30400",
             "PipelineII": "",
-            "PipelineDepth": "157",
+            "PipelineDepth": "152",
             "Loops": [{
                 "Name": "Loop 1.1",
                 "TripCount": "75",
@@ -250,9 +248,9 @@
               }]
           }],
         "Area": {
-          "DSP48E": "26",
-          "FF": "637",
-          "LUT": "654",
+          "DSP48E": "1",
+          "FF": "183",
+          "LUT": "393",
           "BRAM_18K": "0",
           "URAM": "0"
         }
@@ -268,7 +266,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-07-01 10:41:39 BST",
+    "Time": "2021-07-01 12:15:08 BST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }
