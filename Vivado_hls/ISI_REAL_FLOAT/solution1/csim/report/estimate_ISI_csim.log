@@ -1,0 +1,87 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../Compiled_Code/ISI_real.cpp in debug mode
+   Generating csim.exe
+Successfully opening file
+Successfully opening file
+Total size is 75
+The 1 difference is 0.000073
+The 2 difference is 0.000165
+The 3 difference is -0.000043
+The 4 difference is 0.001507
+The 5 difference is -0.000629
+The 6 difference is 0.003902
+The 7 difference is 0.000341
+The 8 difference is -0.000632
+The 9 difference is 0.000846
+The 10 difference is -0.000047
+The 11 difference is 0.000594
+The 12 difference is -0.006384
+The 13 difference is 0.000018
+The 14 difference is 0.000349
+The 15 difference is -0.004520
+The 16 difference is -0.005072
+The 17 difference is -0.000177
+The 18 difference is -0.000040
+The 19 difference is 0.000541
+The 20 difference is -0.001848
+The 21 difference is 0.009719
+The 22 difference is 0.011448
+The 23 difference is 0.010206
+The 24 difference is -0.000415
+The 25 difference is 0.001589
+The 26 difference is -0.000024
+The 27 difference is -0.010362
+The 28 difference is -0.010627
+The 29 difference is -0.015880
+The 30 difference is -0.017495
+The 31 difference is -0.018012
+The 32 difference is -0.068468
+The 33 difference is 0.115268
+The 34 difference is -0.015750
+The 35 difference is -0.087119
+The 36 difference is -0.090676
+The 37 difference is -0.092742
+The 38 difference is -0.006263
+The 39 difference is -0.006812
+The 40 difference is -0.006778
+The 41 difference is 0.146801
+The 42 difference is -0.669910
+The 43 difference is 0.008431
+The 44 difference is 0.009604
+The 45 difference is 0.008554
+The 46 difference is -0.067917
+The 47 difference is -0.070883
+The 48 difference is -0.277939
+The 49 difference is 0.323667
+The 50 difference is 0.337891
+The 51 difference is 0.347493
+The 52 difference is 0.044591
+The 53 difference is -0.052473
+The 54 difference is 0.005408
+The 55 difference is 0.005151
+The 56 difference is 0.005307
+The 57 difference is 0.002650
+The 58 difference is 0.000029
+The 59 difference is -0.001294
+The 60 difference is -0.000145
+The 61 difference is 0.000000
+The 62 difference is 0.000066
+The 63 difference is -0.003097
+The 64 difference is -0.003136
+The 65 difference is 0.001536
+The 66 difference is 0.000902
+The 67 difference is -0.000591
+The 68 difference is 0.000244
+The 69 difference is 0.002167
+The 70 difference is 0.172130
+The 71 difference is -0.000339
+The 72 difference is 0.000736
+The 73 difference is 0.000669
+The 74 difference is -0.000012
+The 75 difference is 0.000000
+The total difference is 3.195141 
+The accuracy is 95.739813%
+Test Passed
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
