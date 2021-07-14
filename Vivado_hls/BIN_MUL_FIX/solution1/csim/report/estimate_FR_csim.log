@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../Compiled_Code/BIN_MUL_FIX.cpp in debug mode
+csim.mk:81: recipe for target 'obj/BIN_MUL_FIX.o' failed
+../../../../Compiled_Code/BIN_MUL_FIX.cpp: In function ‘void estimate_FR(din2 (*)[40], din*, dout*)’:
+../../../../Compiled_Code/BIN_MUL_FIX.cpp:8:9: error: expected ‘;’ before ‘:’ token
+  Channel: for(int i = 0;i<Channel;i++){
+         ^
+../../../../Compiled_Code/BIN_MUL_FIX.cpp:8:25: error: ‘i’ was not declared in this scope
+  Channel: for(int i = 0;i<Channel;i++){
+                         ^
+make: *** [obj/BIN_MUL_FIX.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************
