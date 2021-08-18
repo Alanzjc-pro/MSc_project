@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vivado HLS Report for 'estimate_FR'
+================================================================
+* Date:           Wed Aug 18 15:08:02 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        BIN_FLOAT
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.621|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  385|  4129|  385|  4129|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-----+------+----------+-----------+-----------+------+----------+
+        |                 |   Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    | min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-----+------+----------+-----------+-----------+------+----------+
+        |- FR_estimation  |  384|  4128|  4 ~ 43  |          -|          -|    96|    no    |
+        +-----------------+-----+------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    877|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        6|      0|    3937|   4617|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    248|    -|
+|Register         |        -|      -|     242|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        6|      0|    4179|   5742|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        2|      0|       3|     10|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------+------------------------------------+---------+-------+------+------+-----+
+    |                Instance               |               Module               | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +---------------------------------------+------------------------------------+---------+-------+------+------+-----+
+    |estimate_FR_AXILiteS_s_axi_U           |estimate_FR_AXILiteS_s_axi          |        6|      0|   314|   314|    0|
+    |estimate_FR_ddiv_64ns_64ns_64_31_1_U1  |estimate_FR_ddiv_64ns_64ns_64_31_1  |        0|      0|  3211|  3658|    0|
+    |estimate_FR_sitodp_32ns_64_6_1_U2      |estimate_FR_sitodp_32ns_64_6_1      |        0|      0|   412|   645|    0|
+    +---------------------------------------+------------------------------------+---------+-------+------+------+-----+
+    |Total                                  |                                    |        6|      0|  3937|  4617|    0|
+    +---------------------------------------+------------------------------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+-----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+-----+------------+------------+
+    |add_ln502_fu_241_p2   |     +    |      0|  0|   12|          11|          12|
+    |add_ln8_fu_191_p2     |     +    |      0|  0|   39|          32|           1|
+    |i_fu_174_p2           |     +    |      0|  0|   15|           7|           1|
+    |result_V_1_fu_327_p2  |     -    |      0|  0|   39|           1|          32|
+    |sub_ln1311_fu_255_p2  |     -    |      0|  0|   13|          10|          11|
+    |icmp_ln10_fu_162_p2   |   icmp   |      0|  0|   18|          32|           1|
+    |icmp_ln6_fu_168_p2    |   icmp   |      0|  0|   11|           7|           7|
+    |icmp_ln7_fu_185_p2    |   icmp   |      0|  0|   18|          32|           1|
+    |r_V_fu_285_p2         |   lshr   |      0|  0|  162|          54|          54|
+    |outputs_d0            |  select  |      0|  0|   32|           1|          32|
+    |p_Val2_5_fu_319_p3    |  select  |      0|  0|   32|           1|          32|
+    |ush_fu_265_p3         |  select  |      0|  0|   12|           1|          12|
+    |r_V_1_fu_291_p2       |    shl   |      0|  0|  474|         137|         137|
+    +----------------------+----------+-------+---+-----+------------+------------+
+    |Total                 |          |      0|  0|  877|         326|         333|
+    +----------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+-----+-----------+-----+-----------+
+    |       Name      | LUT | Input Size| Bits| Total Bits|
+    +-----------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm        |  197|         45|    1|         45|
+    |counts_address0  |   27|          5|    7|         35|
+    |counts_d0        |   15|          3|   32|         96|
+    |i_0_reg_142      |    9|          2|    7|         14|
+    +-----------------+-----+-----------+-----+-----------+
+    |Total            |  248|         55|   47|        190|
+    +-----------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |ap_CS_fsm              |  44|   0|   44|          0|
+    |counts_addr_1_reg_372  |   7|   0|    7|          0|
+    |counts_addr_reg_367    |   7|   0|    7|          0|
+    |i_0_reg_142            |   7|   0|    7|          0|
+    |i_reg_346              |   7|   0|    7|          0|
+    |icmp_ln10_reg_339      |   1|   0|    1|          0|
+    |icmp_ln7_reg_363       |   1|   0|    1|          0|
+    |p_Result_s_reg_392     |   1|   0|    1|          0|
+    |p_Val2_5_reg_397       |  32|   0|   32|          0|
+    |tmp_reg_382            |  64|   0|   64|          0|
+    |x_assign_reg_387       |  64|   0|   64|          0|
+    |zext_ln7_reg_351       |   7|   0|   64|         57|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  | 242|   0|  299|         57|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_AWADDR   |  in |   12|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_ARADDR   |  in |   12|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |   AXILiteS   |     array    |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |   AXILiteS   |     array    |
+|ap_clk                  |  in |    1| ap_ctrl_hs |  estimate_FR | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs |  estimate_FR | return value |
+|interrupt               | out |    1| ap_ctrl_hs |  estimate_FR | return value |
++------------------------+-----+-----+------------+--------------+--------------+
+
