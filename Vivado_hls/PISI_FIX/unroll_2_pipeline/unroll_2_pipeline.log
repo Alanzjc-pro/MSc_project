@@ -1,0 +1,505 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'code/ISI_MUL_En.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2079 ; free virtual = 6084
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2079 ; free virtual = 6084
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2068 ; free virtual = 6075
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2061 ; free virtual = 6068
+INFO: [XFORM 203-501] Unrolling loop 'estimate_ISI' (code/ISI_MUL_En.cpp:17) in function 'estimate_ISI_encode' partially with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode' partially with a factor of 8.
+WARNING: [XFORM 203-561] Updating loop upper bound from 2 to 1 for loop 'Pack_output' in function 'estimate_ISI_encode'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 2 to 1 for loop 'Pack_output' in function 'estimate_ISI_encode'.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'output' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'rem' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'spks.V' (code/ISI_MUL_En.cpp:5) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'update.V' (code/ISI_MUL_En.cpp:6) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'ISI.V' (code/ISI_MUL_En.cpp:7) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'ISIquan.V' (code/ISI_MUL_En.cpp:14) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:58:5) to (code/ISI_MUL_En.cpp:66:2) in function 'reduce_range'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2034 ; free virtual = 6042
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2032 ; free virtual = 6040
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_ISI_encode' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'estimate_ISI'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('rem_0_addr_write_ln34', code/ISI_MUL_En.cpp:34) of variable 'tmp5', code/ISI_MUL_En.cpp:34 on array 'rem_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'rem_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Pack_output'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ISIquan_0_V_load_2', code/ISI_MUL_En.cpp:43) on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ISIquan_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.76 seconds; current allocated memory: 118.872 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.59 seconds; current allocated memory: 120.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/output_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/output_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/output_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/output_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'estimate_ISI_encode' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'inputs_0', 'inputs_2', 'inputs_3', 'rem_0', 'rem_1', 'rem_2', 'rem_3', 'output_0', 'output_1', 'output_2' and 'output_3' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'estimate_ISI_encode'.
+INFO: [HLS 200-111]  Elapsed time: 0.78 seconds; current allocated memory: 123.610 MB.
+INFO: [RTMG 210-278] Implementing memory 'estimate_ISI_encode_ISIquan_0_V_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 896.293 ; gain = 195.016 ; free physical = 2006 ; free virtual = 6021
+INFO: [VHDL 208-304] Generating VHDL RTL for estimate_ISI_encode.
+INFO: [VLOG 209-307] Generating Verilog RTL for estimate_ISI_encode.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'code/ISI_MUL_En.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2041 ; free virtual = 6046
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2041 ; free virtual = 6046
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2029 ; free virtual = 6036
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2021 ; free virtual = 6029
+INFO: [XFORM 203-501] Unrolling loop 'estimate_ISI' (code/ISI_MUL_En.cpp:17) in function 'estimate_ISI_encode' partially with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode' partially with a factor of 8.
+WARNING: [XFORM 203-561] Updating loop upper bound from 2 to 1 for loop 'Pack_output' in function 'estimate_ISI_encode'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 2 to 1 for loop 'Pack_output' in function 'estimate_ISI_encode'.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'output' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'rem' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'ISIquan.V' (code/ISI_MUL_En.cpp:14) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:58:5) to (code/ISI_MUL_En.cpp:66:2) in function 'reduce_range'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1993 ; free virtual = 6002
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1980 ; free virtual = 5989
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_ISI_encode' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'estimate_ISI'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('inputs_0_load_1', code/ISI_MUL_En.cpp:18) on array 'inputs_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'inputs_0'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('rem_0_addr_write_ln34', code/ISI_MUL_En.cpp:34) of variable 'tmp9', code/ISI_MUL_En.cpp:34 on array 'rem_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'rem_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 17.
+INFO: [SCHED 204-61] Pipelining loop 'Pack_output'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ISIquan_0_V_load_2', code/ISI_MUL_En.cpp:43) on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ISIquan_0_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('output_1_addr_1_write_ln51', code/ISI_MUL_En.cpp:51) of variable 'or_ln51_6_3', code/ISI_MUL_En.cpp:51 on array 'output_1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'output_1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.22 seconds; current allocated memory: 120.097 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.78 seconds; current allocated memory: 122.586 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/output_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/output_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'estimate_ISI_encode' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'inputs_0', 'rem_0', 'rem_1', 'output_0' and 'output_1' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'estimate_ISI_encode'.
+INFO: [HLS 200-111]  Elapsed time: 1.03 seconds; current allocated memory: 126.232 MB.
+INFO: [RTMG 210-278] Implementing memory 'estimate_ISI_encode_ISIquan_0_V_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 893.277 ; gain = 192.000 ; free physical = 1959 ; free virtual = 5977
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'code/ISI_MUL_En.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2021 ; free virtual = 6027
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2021 ; free virtual = 6027
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2010 ; free virtual = 6017
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2002 ; free virtual = 6010
+INFO: [XFORM 203-501] Unrolling loop 'estimate_ISI' (code/ISI_MUL_En.cpp:17) in function 'estimate_ISI_encode' partially with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode' partially with a factor of 8.
+WARNING: [XFORM 203-561] Updating loop upper bound from 2 to 1 for loop 'Pack_output' in function 'estimate_ISI_encode'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 2 to 1 for loop 'Pack_output' in function 'estimate_ISI_encode'.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'output' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'rem' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'ISIquan.V' (code/ISI_MUL_En.cpp:14) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:58:5) to (code/ISI_MUL_En.cpp:66:2) in function 'reduce_range'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:36:8) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1974 ; free virtual = 5983
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1971 ; free virtual = 5981
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_ISI_encode' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'estimate_ISI'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('rem_0_addr_write_ln34', code/ISI_MUL_En.cpp:34) of variable 'tmp9', code/ISI_MUL_En.cpp:34 on array 'rem_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'rem_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Pack_output'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ISIquan_0_V_load_2', code/ISI_MUL_En.cpp:43) on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ISIquan_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.47 seconds; current allocated memory: 120.027 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.73 seconds; current allocated memory: 122.490 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_7' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/rem_7' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/output_0' to 's_axilite & ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'code/ISI_MUL_En.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2000 ; free virtual = 6008
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 2000 ; free virtual = 6008
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1990 ; free virtual = 6000
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1983 ; free virtual = 5994
+INFO: [XFORM 203-501] Unrolling loop 'estimate_ISI' (code/ISI_MUL_En.cpp:17) in function 'estimate_ISI_encode' partially with a factor of 12.
+INFO: [XFORM 203-501] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode' partially with a factor of 8.
+WARNING: [XFORM 203-561] Updating loop upper bound from 2 to 1 for loop 'Pack_output' in function 'estimate_ISI_encode'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 2 to 1 for loop 'Pack_output' in function 'estimate_ISI_encode'.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 12.
+INFO: [XFORM 203-101] Partitioning array 'output' (code/ISI_MUL_En.cpp:3) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'rem' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 12.
+INFO: [XFORM 203-101] Partitioning array 'ISIquan.V' (code/ISI_MUL_En.cpp:14) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:58:5) to (code/ISI_MUL_En.cpp:66:2) in function 'reduce_range'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1954 ; free virtual = 5965
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 893.637 ; gain = 192.359 ; free physical = 1950 ; free virtual = 5962
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_ISI_encode' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'estimate_ISI'.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_ISI_encode' (Loop: estimate_ISI): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('ISIquan_0_V_addr_10_write_ln38', code/ISI_MUL_En.cpp:38) of constant 15 on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14 and 'store' operation ('ISIquan_0_V_addr_1_write_ln38', code/ISI_MUL_En.cpp:38) of constant 15 on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Pack_output'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ISIquan_0_V_load_2', code/ISI_MUL_En.cpp:43) on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ISIquan_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.02 seconds; current allocated memory: 126.491 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.26 seconds; current allocated memory: 130.326 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_7' to 's_axilite & ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'code/ISI_MUL_En.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1996 ; free virtual = 6004
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1996 ; free virtual = 6004
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode(int*, int*, int*)': changing partial unrolling into complete unrolling since the unrolling factor (=12) is no less than the loop trip count (=12).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1984 ; free virtual = 5994
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1978 ; free virtual = 5988
+INFO: [XFORM 203-501] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode': changing partial unrolling into complete unrolling since the unrolling factor (=12) is no less than the loop trip count (=12).
+INFO: [XFORM 203-501] Unrolling loop 'estimate_ISI' (code/ISI_MUL_En.cpp:17) in function 'estimate_ISI_encode' partially with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode' completely with a factor of 12.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 12.
+INFO: [XFORM 203-101] Partitioning array 'output' (code/ISI_MUL_En.cpp:3) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'rem' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 12.
+INFO: [XFORM 203-101] Partitioning array 'ISIquan.V' (code/ISI_MUL_En.cpp:14) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:58:5) to (code/ISI_MUL_En.cpp:66:2) in function 'reduce_range'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1948 ; free virtual = 5960
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 893.641 ; gain = 192.363 ; free physical = 1945 ; free virtual = 5957
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_ISI_encode' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'estimate_ISI'.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_ISI_encode' (Loop: estimate_ISI): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('ISIquan_0_V_addr_14_write_ln38', code/ISI_MUL_En.cpp:38) of constant 15 on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14 and 'store' operation ('ISIquan_0_V_addr_12_write_ln38', code/ISI_MUL_En.cpp:38) of constant 15 on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.78 seconds; current allocated memory: 127.004 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.35 seconds; current allocated memory: 130.995 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_7' to 's_axilite & ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'code/ISI_MUL_En.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1969 ; free virtual = 5978
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1969 ; free virtual = 5978
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode(int*, int*, int*)': changing partial unrolling into complete unrolling since the unrolling factor (=12) is no less than the loop trip count (=12).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1958 ; free virtual = 5968
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1951 ; free virtual = 5962
+INFO: [XFORM 203-501] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode': changing partial unrolling into complete unrolling since the unrolling factor (=12) is no less than the loop trip count (=12).
+INFO: [XFORM 203-501] Unrolling loop 'estimate_ISI' (code/ISI_MUL_En.cpp:17) in function 'estimate_ISI_encode' partially with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode' completely with a factor of 12.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'Pack_output' (code/ISI_MUL_En.cpp:42) in function 'estimate_ISI_encode' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 12.
+INFO: [XFORM 203-101] Partitioning array 'output' (code/ISI_MUL_En.cpp:3) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'rem' (code/ISI_MUL_En.cpp:3) in dimension 1 with a cyclic factor 12.
+INFO: [XFORM 203-101] Partitioning array 'ISIquan.V' (code/ISI_MUL_En.cpp:14) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:58:5) to (code/ISI_MUL_En.cpp:66:2) in function 'reduce_range'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (code/ISI_MUL_En.cpp:22:9) to (code/ISI_MUL_En.cpp:35:22) in function 'estimate_ISI_encode'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'reduce_range' into 'estimate_ISI_encode' (code/ISI_MUL_En.cpp:35) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 1921 ; free virtual = 5934
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 893.641 ; gain = 192.363 ; free physical = 1918 ; free virtual = 5930
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_ISI_encode' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'estimate_ISI'.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_ISI_encode' (Loop: estimate_ISI): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('ISIquan_0_V_addr_14_write_ln38', code/ISI_MUL_En.cpp:38) of constant 15 on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14 and 'store' operation ('ISIquan_0_V_addr_12_write_ln38', code/ISI_MUL_En.cpp:38) of constant 15 on array 'ISIquan[0].V', code/ISI_MUL_En.cpp:14.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.38 seconds; current allocated memory: 127.010 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.4 seconds; current allocated memory: 131.000 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_ISI_encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_ISI_encode/inputs_7' to 's_axilite & ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

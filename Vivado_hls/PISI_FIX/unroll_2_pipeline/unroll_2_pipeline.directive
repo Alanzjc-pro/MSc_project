@@ -1,0 +1,77 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="estimate_ISI_encode" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="inputs" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="rem" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="output" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="Pack_output" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="Pack_output" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="12"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="ISIquan" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="8"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="estimate_ISI" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="estimate_ISI" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="inputs" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="rem" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="estimate_ISI_encode" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="output" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

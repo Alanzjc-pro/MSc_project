@@ -1,0 +1,265 @@
+
+
+================================================================
+== Vivado HLS Report for 'estimate_ISI_encode'
+================================================================
+* Date:           Thu Aug 12 12:04:51 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        ISI_MUL_EN
+* Solution:       unroll_2_pipeline
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.242|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  106|  106|  106|  106|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- estimate_ISI  |   98|   98|         5|          2|          1|    48|    yes   |
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      0|       0|    327|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |       12|      -|     516|    460|    -|
+|Memory           |        0|      -|      64|      8|    0|
+|Multiplexer      |        -|      -|       -|   1035|    -|
+|Register         |        -|      -|     284|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |       12|      0|     864|   1830|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        4|      0|   ~0   |      3|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+------------------------------------+---------+-------+-----+-----+-----+
+    |               Instance               |               Module               | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +--------------------------------------+------------------------------------+---------+-------+-----+-----+-----+
+    |estimate_ISI_encode_AXILiteS_s_axi_U  |estimate_ISI_encode_AXILiteS_s_axi  |       12|      0|  516|  460|    0|
+    +--------------------------------------+------------------------------------+---------+-------+-----+-----+-----+
+    |Total                                 |                                    |       12|      0|  516|  460|    0|
+    +--------------------------------------+------------------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +---------------+---------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |     Memory    |              Module             | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------+---------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |ISIquan_0_V_U  |estimate_ISI_encode_ISIquan_0_V  |        0|  8|   1|    0|    12|    4|     1|           48|
+    |ISIquan_1_V_U  |estimate_ISI_encode_ISIquan_0_V  |        0|  8|   1|    0|    12|    4|     1|           48|
+    |ISIquan_2_V_U  |estimate_ISI_encode_ISIquan_0_V  |        0|  8|   1|    0|    12|    4|     1|           48|
+    |ISIquan_3_V_U  |estimate_ISI_encode_ISIquan_0_V  |        0|  8|   1|    0|    12|    4|     1|           48|
+    |ISIquan_4_V_U  |estimate_ISI_encode_ISIquan_0_V  |        0|  8|   1|    0|    12|    4|     1|           48|
+    |ISIquan_5_V_U  |estimate_ISI_encode_ISIquan_0_V  |        0|  8|   1|    0|    12|    4|     1|           48|
+    |ISIquan_6_V_U  |estimate_ISI_encode_ISIquan_0_V  |        0|  8|   1|    0|    12|    4|     1|           48|
+    |ISIquan_7_V_U  |estimate_ISI_encode_ISIquan_0_V  |        0|  8|   1|    0|    12|    4|     1|           48|
+    +---------------+---------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total          |                                 |        0| 64|   8|    0|    96|   32|     8|          384|
+    +---------------+---------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |        Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |mul_ln1118_1_fu_1779_p2     |     *    |      0|  0|  33|           7|           7|
+    |mul_ln1118_fu_1561_p2       |     *    |      0|  0|  33|           7|           7|
+    |add_ln17_fu_1462_p2         |     +    |      0|  0|  15|           7|           2|
+    |sub_ln1193_1_fu_1767_p2     |     -    |      0|  0|  15|           8|           8|
+    |sub_ln1193_fu_1547_p2       |     -    |      0|  0|  15|           8|           8|
+    |sub_ln703_1_fu_1577_p2      |     -    |      0|  0|  12|          12|          12|
+    |sub_ln703_2_fu_1810_p2      |     -    |      0|  0|  12|          12|          12|
+    |sub_ln703_3_fu_1816_p2      |     -    |      0|  0|  12|          12|          12|
+    |sub_ln703_fu_1571_p2        |     -    |      0|  0|  12|          12|          12|
+    |sub_ln731_1_fu_1608_p2      |     -    |      0|  0|  12|          12|          12|
+    |sub_ln731_fu_1509_p2        |     -    |      0|  0|  12|          12|          12|
+    |and_ln1497_1_fu_1898_p2     |    and   |      0|  0|   2|           1|           1|
+    |and_ln1497_fu_1704_p2       |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln1494_1_fu_1801_p2    |   icmp   |      0|  0|  13|          15|          15|
+    |icmp_ln1494_fu_1653_p2      |   icmp   |      0|  0|  13|          15|          15|
+    |icmp_ln1495_1_fu_1870_p2    |   icmp   |      0|  0|  13|          12|           6|
+    |icmp_ln1495_fu_1676_p2      |   icmp   |      0|  0|  13|          12|           6|
+    |icmp_ln1497_1_fu_1876_p2    |   icmp   |      0|  0|  13|          12|           9|
+    |icmp_ln1497_fu_1682_p2      |   icmp   |      0|  0|  13|          12|           9|
+    |icmp_ln17_fu_1371_p2        |   icmp   |      0|  0|  11|           7|           7|
+    |grp_fu_1338_p2              |    or    |      0|  0|   3|           3|           1|
+    |or_ln1495_1_fu_1912_p2      |    or    |      0|  0|   2|           1|           1|
+    |or_ln1495_fu_1718_p2        |    or    |      0|  0|   2|           1|           1|
+    |ISI_q_V_1_fu_1918_p3        |  select  |      0|  0|   4|           1|           4|
+    |ISI_q_V_fu_1724_p3          |  select  |      0|  0|   4|           1|           4|
+    |select_ln1494_1_fu_1840_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_fu_1659_p3    |  select  |      0|  0|  12|           1|          12|
+    |select_ln1495_2_fu_1904_p3  |  select  |      0|  0|   3|           1|           3|
+    |select_ln1495_fu_1710_p3    |  select  |      0|  0|   3|           1|           3|
+    |ap_enable_pp0               |    xor   |      0|  0|   2|           1|           2|
+    |xor_ln1495_1_fu_1892_p2     |    xor   |      0|  0|   2|           1|           2|
+    |xor_ln1495_fu_1698_p2       |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |Total                       |          |      0|  0| 327|         210|         220|
+    +----------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ISIquan_0_V_address0             |  44|          9|    4|         36|
+    |ISIquan_0_V_address1             |  38|          7|    4|         28|
+    |ISIquan_0_V_d0                   |  15|          3|    4|         12|
+    |ISIquan_1_V_address0             |  44|          9|    4|         36|
+    |ISIquan_1_V_address1             |  38|          7|    4|         28|
+    |ISIquan_1_V_d0                   |  15|          3|    4|         12|
+    |ISIquan_2_V_address0             |  44|          9|    4|         36|
+    |ISIquan_2_V_address1             |  38|          7|    4|         28|
+    |ISIquan_2_V_d0                   |  15|          3|    4|         12|
+    |ISIquan_3_V_address0             |  44|          9|    4|         36|
+    |ISIquan_3_V_address1             |  38|          7|    4|         28|
+    |ISIquan_3_V_d0                   |  15|          3|    4|         12|
+    |ISIquan_4_V_address0             |  44|          9|    4|         36|
+    |ISIquan_4_V_address1             |  38|          7|    4|         28|
+    |ISIquan_4_V_d0                   |  15|          3|    4|         12|
+    |ISIquan_5_V_address0             |  44|          9|    4|         36|
+    |ISIquan_5_V_address1             |  38|          7|    4|         28|
+    |ISIquan_5_V_d0                   |  15|          3|    4|         12|
+    |ISIquan_6_V_address0             |  44|          9|    4|         36|
+    |ISIquan_6_V_address1             |  38|          7|    4|         28|
+    |ISIquan_6_V_d0                   |  15|          3|    4|         12|
+    |ISIquan_7_V_address0             |  44|          9|    4|         36|
+    |ISIquan_7_V_address1             |  38|          7|    4|         28|
+    |ISIquan_7_V_d0                   |  15|          3|    4|         12|
+    |ap_NS_fsm                        |  50|         11|    1|         11|
+    |ap_enable_reg_pp0_iter2          |   9|          2|    1|          2|
+    |ap_phi_mux_j_0_0_phi_fu_1330_p4  |   9|          2|    7|         14|
+    |j_0_0_reg_1326                   |   9|          2|    7|         14|
+    |output_0_address0                |  38|          7|    3|         21|
+    |output_0_d0                      |  38|          7|   32|        224|
+    |output_1_address0                |  38|          7|    3|         21|
+    |output_1_d0                      |  38|          7|   32|        224|
+    |rem_0_address0                   |  15|          3|    6|         18|
+    |rem_1_address0                   |  15|          3|    6|         18|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            |1035|        203|  194|       1175|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+----+----+-----+-----------+
+    |                 Name                 | FF | LUT| Bits| Const Bits|
+    +--------------------------------------+----+----+-----+-----------+
+    |add_ln17_reg_2256                     |   7|   0|    7|          0|
+    |ap_CS_fsm                             |  10|   0|   10|          0|
+    |ap_enable_reg_pp0_iter0               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2               |   1|   0|    1|          0|
+    |icmp_ln1494_1_reg_2322                |   1|   0|    1|          0|
+    |icmp_ln17_reg_2190                    |   1|   0|    1|          0|
+    |j_0_0_reg_1326                        |   7|   0|    7|          0|
+    |lshr_ln321_1_reg_2288                 |   4|   0|    4|          0|
+    |mul_ln1118_reg_2274                   |  14|   0|   14|          0|
+    |reg_1363                              |   2|   0|    3|          1|
+    |reg_1363_pp0_iter1_reg                |   2|   0|    3|          1|
+    |reg_1367                              |   4|   0|    4|          0|
+    |rem_0_addr_reg_2223                   |   6|   0|    6|          0|
+    |rem_0_addr_reg_2223_pp0_iter1_reg     |   6|   0|    6|          0|
+    |rem_1_addr_reg_2246                   |   6|   0|    6|          0|
+    |rem_1_addr_reg_2246_pp0_iter1_reg     |   6|   0|    6|          0|
+    |sub_ln1193_reg_2269                   |   8|   0|    8|          0|
+    |sub_ln703_1_reg_2279                  |  12|   0|   12|          0|
+    |sub_ln703_3_reg_2327                  |  12|   0|   12|          0|
+    |sub_ln731_1_reg_2298                  |  12|   0|   12|          0|
+    |sub_ln731_reg_2264                    |  12|   0|   12|          0|
+    |tmp_10_reg_2251                       |  11|   0|   11|          0|
+    |tmp_12_reg_2237                       |   1|   0|    1|          0|
+    |tmp_12_reg_2237_pp0_iter1_reg         |   1|   0|    1|          0|
+    |tmp_1_reg_2317                        |  10|   0|   10|          0|
+    |tmp_5_reg_2218                        |  19|   0|   19|          0|
+    |tmp_5_reg_2218_pp0_iter1_reg          |  19|   0|   19|          0|
+    |tmp_7_reg_2228                        |  11|   0|   11|          0|
+    |tmp_8_reg_2214                        |   1|   0|    1|          0|
+    |tmp_8_reg_2214_pp0_iter1_reg          |   1|   0|    1|          0|
+    |tmp_9_reg_2241                        |  19|   0|   19|          0|
+    |tmp_9_reg_2241_pp0_iter1_reg          |  19|   0|   19|          0|
+    |tmp_s_reg_2293                        |  10|   0|   10|          0|
+    |trunc_ln1333_1_reg_2310               |   7|   0|    7|          0|
+    |trunc_ln1333_3_reg_2303               |   7|   0|    7|          0|
+    |trunc_ln301_1_reg_2233                |   1|   0|    1|          0|
+    |trunc_ln301_1_reg_2233_pp0_iter1_reg  |   1|   0|    1|          0|
+    |trunc_ln301_reg_2210                  |   1|   0|    1|          0|
+    |trunc_ln301_reg_2210_pp0_iter1_reg    |   1|   0|    1|          0|
+    |trunc_ln321_1_reg_2284                |   3|   0|    3|          0|
+    |zext_ln18_reg_2194                    |   6|   0|   64|         58|
+    +--------------------------------------+----+----+-----+-----------+
+    |Total                                 | 284|   0|  344|         60|
+    +--------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+---------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------+-----+-----+------------+---------------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_AWADDR   |  in |   11|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_ARADDR   |  in |   11|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |       AXILiteS      |     array    |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |       AXILiteS      |     array    |
+|ap_clk                  |  in |    1| ap_ctrl_hs | estimate_ISI_encode | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs | estimate_ISI_encode | return value |
+|interrupt               | out |    1| ap_ctrl_hs | estimate_ISI_encode | return value |
++------------------------+-----+-----+------------+---------------------+--------------+
+
