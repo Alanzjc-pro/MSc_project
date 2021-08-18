@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="estimate_ISI" xd:componentRef="estimate_ISI" xd:initiationInterval="483" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
-  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
-  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x200" xd:arraySize="96" xd:dataWidth="32"/>
-  <xd:arg xd:name="rem[]" xd:originalName="rem" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x400" xd:arraySize="96" xd:dataWidth="32"/>
-  <xd:arg xd:name="output[]" xd:originalName="output" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x600" xd:arraySize="32" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="386" xd:worst-case="482" xd:average-case="482"/>
-  <xd:resourceEstimates xd:LUT="594" xd:FF="427" xd:BRAM="6" xd:DSP="0"/>
-</xd:acceleratorMap>
