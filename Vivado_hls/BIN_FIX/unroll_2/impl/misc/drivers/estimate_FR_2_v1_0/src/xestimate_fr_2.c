@@ -1,0 +1,700 @@
+// ==============================================================
+// Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+// ==============================================================
+/***************************** Include Files *********************************/
+#include "xestimate_fr_2.h"
+
+/************************** Function Implementation *************************/
+#ifndef __linux__
+int XEstimate_fr_2_CfgInitialize(XEstimate_fr_2 *InstancePtr, XEstimate_fr_2_Config *ConfigPtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(ConfigPtr != NULL);
+
+    InstancePtr->Axilites_BaseAddress = ConfigPtr->Axilites_BaseAddress;
+    InstancePtr->IsReady = XIL_COMPONENT_IS_READY;
+
+    return XST_SUCCESS;
+}
+#endif
+
+void XEstimate_fr_2_Start(XEstimate_fr_2 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XEstimate_fr_2_ReadReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_AP_CTRL) & 0x80;
+    XEstimate_fr_2_WriteReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_AP_CTRL, Data | 0x01);
+}
+
+u32 XEstimate_fr_2_IsDone(XEstimate_fr_2 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XEstimate_fr_2_ReadReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_AP_CTRL);
+    return (Data >> 1) & 0x1;
+}
+
+u32 XEstimate_fr_2_IsIdle(XEstimate_fr_2 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XEstimate_fr_2_ReadReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_AP_CTRL);
+    return (Data >> 2) & 0x1;
+}
+
+u32 XEstimate_fr_2_IsReady(XEstimate_fr_2 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XEstimate_fr_2_ReadReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_AP_CTRL);
+    // check ap_start to see if the pcore is ready for next input
+    return !(Data & 0x1);
+}
+
+void XEstimate_fr_2_EnableAutoRestart(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XEstimate_fr_2_WriteReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_AP_CTRL, 0x80);
+}
+
+void XEstimate_fr_2_DisableAutoRestart(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XEstimate_fr_2_WriteReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_AP_CTRL, 0);
+}
+
+u32 XEstimate_fr_2_Get_inputs_0_BaseAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE);
+}
+
+u32 XEstimate_fr_2_Get_inputs_0_HighAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_HIGH);
+}
+
+u32 XEstimate_fr_2_Get_inputs_0_TotalBytes(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + 1);
+}
+
+u32 XEstimate_fr_2_Get_inputs_0_BitWidth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_WIDTH_INPUTS_0;
+}
+
+u32 XEstimate_fr_2_Get_inputs_0_Depth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_DEPTH_INPUTS_0;
+}
+
+u32 XEstimate_fr_2_Write_inputs_0_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_inputs_0_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Write_inputs_0_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_inputs_0_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_0_BASE + offset + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Get_inputs_1_BaseAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE);
+}
+
+u32 XEstimate_fr_2_Get_inputs_1_HighAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_HIGH);
+}
+
+u32 XEstimate_fr_2_Get_inputs_1_TotalBytes(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + 1);
+}
+
+u32 XEstimate_fr_2_Get_inputs_1_BitWidth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_WIDTH_INPUTS_1;
+}
+
+u32 XEstimate_fr_2_Get_inputs_1_Depth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_DEPTH_INPUTS_1;
+}
+
+u32 XEstimate_fr_2_Write_inputs_1_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_inputs_1_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Write_inputs_1_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_inputs_1_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_INPUTS_1_BASE + offset + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Get_counts_0_BaseAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE);
+}
+
+u32 XEstimate_fr_2_Get_counts_0_HighAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_HIGH);
+}
+
+u32 XEstimate_fr_2_Get_counts_0_TotalBytes(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + 1);
+}
+
+u32 XEstimate_fr_2_Get_counts_0_BitWidth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_WIDTH_COUNTS_0;
+}
+
+u32 XEstimate_fr_2_Get_counts_0_Depth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_DEPTH_COUNTS_0;
+}
+
+u32 XEstimate_fr_2_Write_counts_0_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_counts_0_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Write_counts_0_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_counts_0_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_0_BASE + offset + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Get_counts_1_BaseAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE);
+}
+
+u32 XEstimate_fr_2_Get_counts_1_HighAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_HIGH);
+}
+
+u32 XEstimate_fr_2_Get_counts_1_TotalBytes(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + 1);
+}
+
+u32 XEstimate_fr_2_Get_counts_1_BitWidth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_WIDTH_COUNTS_1;
+}
+
+u32 XEstimate_fr_2_Get_counts_1_Depth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_DEPTH_COUNTS_1;
+}
+
+u32 XEstimate_fr_2_Write_counts_1_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_counts_1_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Write_counts_1_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_counts_1_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_COUNTS_1_BASE + offset + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Get_outputs_0_BaseAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE);
+}
+
+u32 XEstimate_fr_2_Get_outputs_0_HighAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_HIGH);
+}
+
+u32 XEstimate_fr_2_Get_outputs_0_TotalBytes(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + 1);
+}
+
+u32 XEstimate_fr_2_Get_outputs_0_BitWidth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_WIDTH_OUTPUTS_0;
+}
+
+u32 XEstimate_fr_2_Get_outputs_0_Depth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_DEPTH_OUTPUTS_0;
+}
+
+u32 XEstimate_fr_2_Write_outputs_0_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_outputs_0_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Write_outputs_0_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_outputs_0_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_0_BASE + offset + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Get_outputs_1_BaseAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE);
+}
+
+u32 XEstimate_fr_2_Get_outputs_1_HighAddress(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_HIGH);
+}
+
+u32 XEstimate_fr_2_Get_outputs_1_TotalBytes(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + 1);
+}
+
+u32 XEstimate_fr_2_Get_outputs_1_BitWidth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_WIDTH_OUTPUTS_1;
+}
+
+u32 XEstimate_fr_2_Get_outputs_1_Depth(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XESTIMATE_FR_2_AXILITES_DEPTH_OUTPUTS_1;
+}
+
+u32 XEstimate_fr_2_Write_outputs_1_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + (offset + i)*4) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_outputs_1_Words(XEstimate_fr_2 *InstancePtr, int offset, int *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length)*4 > (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(int *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + (offset + i)*4);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Write_outputs_1_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + offset + i) = *(data + i);
+    }
+    return length;
+}
+
+u32 XEstimate_fr_2_Read_outputs_1_Bytes(XEstimate_fr_2 *InstancePtr, int offset, char *data, int length) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+
+    int i;
+
+    if ((offset + length) > (XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_HIGH - XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + 1))
+        return 0;
+
+    for (i = 0; i < length; i++) {
+        *(data + i) = *(char *)(InstancePtr->Axilites_BaseAddress + XESTIMATE_FR_2_AXILITES_ADDR_OUTPUTS_1_BASE + offset + i);
+    }
+    return length;
+}
+
+void XEstimate_fr_2_InterruptGlobalEnable(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XEstimate_fr_2_WriteReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_GIE, 1);
+}
+
+void XEstimate_fr_2_InterruptGlobalDisable(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XEstimate_fr_2_WriteReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_GIE, 0);
+}
+
+void XEstimate_fr_2_InterruptEnable(XEstimate_fr_2 *InstancePtr, u32 Mask) {
+    u32 Register;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Register =  XEstimate_fr_2_ReadReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_IER);
+    XEstimate_fr_2_WriteReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_IER, Register | Mask);
+}
+
+void XEstimate_fr_2_InterruptDisable(XEstimate_fr_2 *InstancePtr, u32 Mask) {
+    u32 Register;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Register =  XEstimate_fr_2_ReadReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_IER);
+    XEstimate_fr_2_WriteReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_IER, Register & (~Mask));
+}
+
+void XEstimate_fr_2_InterruptClear(XEstimate_fr_2 *InstancePtr, u32 Mask) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XEstimate_fr_2_WriteReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_ISR, Mask);
+}
+
+u32 XEstimate_fr_2_InterruptGetEnabled(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XEstimate_fr_2_ReadReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_IER);
+}
+
+u32 XEstimate_fr_2_InterruptGetStatus(XEstimate_fr_2 *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XEstimate_fr_2_ReadReg(InstancePtr->Axilites_BaseAddress, XESTIMATE_FR_2_AXILITES_ADDR_ISR);
+}
+

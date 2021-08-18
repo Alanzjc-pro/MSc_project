@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="estimate_FR_2" xd:componentRef="estimate_FR_2" xd:initiationInterval="223" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x100" xd:arraySize="95" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x200" xd:arraySize="95" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x300" xd:arraySize="23" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x340" xd:arraySize="23" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x380" xd:arraySize="23" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x3C0" xd:arraySize="23" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="222" xd:worst-case="222" xd:average-case="222"/>
+  <xd:resourceEstimates xd:LUT="1576" xd:FF="707" xd:BRAM="16" xd:DSP="0"/>
+</xd:acceleratorMap>

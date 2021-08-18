@@ -1,0 +1,186 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 901 ; free virtual = 6243
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 901 ; free virtual = 6243
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 893 ; free virtual = 6235
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 888 ; free virtual = 6231
+INFO: [XFORM 203-501] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'FR_estimation' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:19) in function 'estimate_FR_2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'counts' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'FR.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 863 ; free virtual = 6207
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 862 ; free virtual = 6206
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_FR_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Unpack_count'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'FR_estimation'.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_3_write_ln23', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) of variable 'add_ln700', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_1', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_5_write_ln27', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:27) of constant 0 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_1', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_5_write_ln27', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:27) of constant 0 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_1', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Pack_outputs'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 22.84 seconds; current allocated memory: 109.632 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 110.525 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 900 ; free virtual = 6242
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 900 ; free virtual = 6242
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2(int*, int*, int*)': changing partial unrolling into complete unrolling since the unrolling factor (=24) is no less than the loop trip count (=24).
+INFO: [XFORM 203-501] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2(int*, int*, int*)': changing partial unrolling into complete unrolling since the unrolling factor (=24) is no less than the loop trip count (=24).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 891 ; free virtual = 6234
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 886 ; free virtual = 6230
+INFO: [XFORM 203-501] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2': changing partial unrolling into complete unrolling since the unrolling factor (=24) is no less than the loop trip count (=24).
+INFO: [XFORM 203-501] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2': changing partial unrolling into complete unrolling since the unrolling factor (=24) is no less than the loop trip count (=24).
+INFO: [HLS 200-489] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2' completely with a factor of 24.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-501] Unrolling loop 'FR_estimation' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:19) in function 'estimate_FR_2' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2' completely with a factor of 24.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-101] Partitioning array 'counts' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'FR.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 857 ; free virtual = 6201
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 856 ; free virtual = 6201
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_FR_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FR_estimation'.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_24_write_ln23', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) of variable 'add_ln700', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_2', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_25_write_ln27', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:27) of constant 0 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_2', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_25_write_ln27', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:27) of constant 0 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_2', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 906 ; free virtual = 6248
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 906 ; free virtual = 6248
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 897 ; free virtual = 6241
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 892 ; free virtual = 6236
+INFO: [XFORM 203-501] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2' partially with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'FR_estimation' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:19) in function 'estimate_FR_2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2' partially with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'counts' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 2.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'FR.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23:4) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26:22) in function 'estimate_FR_2'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 866 ; free virtual = 6211
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 865 ; free virtual = 6210
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_FR_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Unpack_count'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('counts_0_load_1', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:13) on array 'counts_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'counts_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'FR_estimation'.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_5_write_ln23', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) of variable 'add_ln700', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_1', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_9_write_ln27', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:27) of constant 0 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_1', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+WARNING: [SCHED 204-68] The II Violation in module 'estimate_FR_2' (Loop: FR_estimation): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('cnt_0_V_addr_9_write_ln27', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:27) of constant 0 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 and 'load' operation ('cnt_0_V_load_1', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Pack_outputs'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('cnt_0_V_load_3', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:32) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'cnt_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.79 seconds; current allocated memory: 110.970 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 112.203 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
