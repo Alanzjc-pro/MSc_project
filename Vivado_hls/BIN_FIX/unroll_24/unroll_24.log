@@ -1,0 +1,175 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 397 ; free virtual = 6106
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 397 ; free virtual = 6106
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2(int*, int*, int*)': changing partial unrolling into complete unrolling since the unrolling factor (=24) is no less than the loop trip count (=24).
+INFO: [XFORM 203-501] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2(int*, int*, int*)': changing partial unrolling into complete unrolling since the unrolling factor (=24) is no less than the loop trip count (=24).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 387 ; free virtual = 6098
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 382 ; free virtual = 6093
+INFO: [XFORM 203-501] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2': changing partial unrolling into complete unrolling since the unrolling factor (=24) is no less than the loop trip count (=24).
+INFO: [XFORM 203-501] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2': changing partial unrolling into complete unrolling since the unrolling factor (=24) is no less than the loop trip count (=24).
+INFO: [HLS 200-489] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2' completely with a factor of 24.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-501] Unrolling loop 'FR_estimation' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:19) in function 'estimate_FR_2' partially with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2' completely with a factor of 24.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-101] Partitioning array 'counts' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 24.
+INFO: [XFORM 203-101] Partitioning array 'outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 with a cyclic factor 24.
+INFO: [XFORM 203-101] Partitioning array 'FR.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 with a cyclic factor 24.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.0' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.1' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.2' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.3' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.4' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.5' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.6' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.7' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.8' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.9' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.10' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.11' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.12' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.13' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.14' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.15' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.16' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.17' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.18' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.19' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.20' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.21' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.22' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cnt.V.23' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.0' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.1' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.2' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.3' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.4' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.5' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.6' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.7' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.8' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.9' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.10' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.11' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.12' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.13' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.14' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.15' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.16' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.17' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.18' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.19' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.20' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.21' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.22' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'FR.V.23' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.0' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.1' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.2' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.3' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.4' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.5' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.6' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.7' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.8' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.9' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.10' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.11' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.12' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.13' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.14' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.15' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.16' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.17' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.18' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.19' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.20' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.21' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.22' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V.23' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.0' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.1' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.2' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.3' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.4' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.5' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.6' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.7' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.8' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.9' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.10' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.11' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.12' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.13' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.14' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.15' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.16' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.17' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.18' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.19' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.20' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.21' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.22' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'FR.V.23' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:19:42) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:19:37) in function 'estimate_FR_2'... converting 385 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 348 ; free virtual = 6060
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 893.277 ; gain = 192.000 ; free physical = 335 ; free virtual = 6048
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_FR_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'FR_estimation'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 44.74 seconds; current allocated memory: 143.868 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.77 seconds; current allocated memory: 158.737 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_7' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_8' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_9' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_10' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_11' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_12' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_13' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_14' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_15' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_16' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_17' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_18' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_19' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_20' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_21' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_22' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_23' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_0' to 's_axilite & ap_ovld'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

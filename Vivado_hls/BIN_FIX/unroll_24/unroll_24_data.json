@@ -1,0 +1,2920 @@
+{
+  "Top": "estimate_FR_2",
+  "RtlTop": "estimate_FR_2",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "0",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg484",
+    "Speed": "-1"
+  },
+  "HlsSolution": {
+    "Config": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ],
+    "DirectiveTcl": [
+      "set_directive_interface estimate_FR ",
+      "set_directive_interface estimate_FR ",
+      "set_directive_interface estimate_FR ",
+      "set_directive_interface estimate_FR ",
+      "set_directive_array_partition estimate_FR ",
+      "set_directive_array_partition estimate_FR ",
+      "set_directive_array_partition estimate_FR ",
+      "set_directive_unroll estimate_FR\/Unpack_count -factor 2",
+      "set_directive_pipeline estimate_FR\/Unpack_count ",
+      "set_directive_pipeline estimate_FR\/FR_estimation ",
+      "set_directive_unroll estimate_FR\/FR_estimation -factor 2",
+      "set_directive_unroll estimate_FR\/Pack_outputs -factor 2",
+      "set_directive_pipeline estimate_FR\/Pack_outputs ",
+      "set_directive_interface estimate_FR_2 ",
+      "set_directive_interface estimate_FR_2 ",
+      "set_directive_interface estimate_FR_2 ",
+      "set_directive_interface estimate_FR_2 ",
+      "set_directive_array_partition estimate_FR_2 ",
+      "set_directive_array_partition estimate_FR_2 ",
+      "set_directive_array_partition estimate_FR_2 ",
+      "set_directive_interface estimate_FR_2 ",
+      "set_directive_unroll estimate_FR_2\/Unpack_count -factor 24",
+      "set_directive_pipeline estimate_FR_2\/Unpack_count ",
+      "set_directive_unroll estimate_FR_2\/FR_estimation -factor 24",
+      "set_directive_pipeline estimate_FR_2\/FR_estimation ",
+      "set_directive_pipeline estimate_FR_2\/Pack_outputs ",
+      "set_directive_pipeline estimate_FR_2\/Pack_outputs ",
+      "set_directive_unroll estimate_FR_2\/Pack_outputs -factor 24",
+      "set_directive_array_partition estimate_FR_2 ",
+      "set_directive_array_partition estimate_FR_2 "
+    ],
+    "DirectiveInfo": [
+      "interface estimate_FR {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredreturn}} {}",
+      "interface estimate_FR {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredinputs}} {}",
+      "interface estimate_FR {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredcounts}} {}",
+      "interface estimate_FR {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredoutputs}} {}",
+      "array_partition estimate_FR {{partition positionBooleanCmd} {variable positionBooleanTextRequiredinputs} {cyclic positionBoolean0type} {factor 2} {dim 1}} {}",
+      "array_partition estimate_FR {{partition positionBooleanCmd} {variable positionBooleanTextRequiredcounts} {cyclic positionBoolean0type} {factor 2} {dim 1}} {}",
+      "array_partition estimate_FR {{partition positionBooleanCmd} {variable positionBooleanTextRequiredoutputs} {cyclic positionBoolean0type} {factor 2} {dim 1}} {}",
+      "unroll estimate_FR\/Unpack_count {{factor 2}} {}",
+      "pipeline estimate_FR\/Unpack_count {} {}",
+      "pipeline estimate_FR\/FR_estimation {} {}",
+      "unroll estimate_FR\/FR_estimation {{factor 2}} {}",
+      "unroll estimate_FR\/Pack_outputs {{factor 2}} {}",
+      "pipeline estimate_FR\/Pack_outputs {} {}",
+      "interface estimate_FR_2 {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredinputs}} {}",
+      "interface estimate_FR_2 {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredinputs}} {}",
+      "interface estimate_FR_2 {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredcounts}} {}",
+      "interface estimate_FR_2 {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredoutputs}} {}",
+      "array_partition estimate_FR_2 {{partition positionBooleanCmd} {variable positionBooleanTextRequiredinputs} {cyclic positionBoolean0type} {factor 24} {dim 1}} {}",
+      "array_partition estimate_FR_2 {{partition positionBooleanCmd} {variable positionBooleanTextRequiredcounts} {cyclic positionBoolean0type} {factor 24} {dim 1}} {}",
+      "array_partition estimate_FR_2 {{partition positionBooleanCmd} {variable positionBooleanTextRequiredoutputs} {cyclic positionBoolean0type} {factor 24} {dim 1}} {}",
+      "interface estimate_FR_2 {{s_axilite positionBoolean0mode} {port positionBooleanTextRequiredreturn}} {}",
+      "unroll estimate_FR_2\/Unpack_count {{factor 24}} {}",
+      "pipeline estimate_FR_2\/Unpack_count {} {}",
+      "unroll estimate_FR_2\/FR_estimation {{factor 24}} {}",
+      "pipeline estimate_FR_2\/FR_estimation {} {}",
+      "pipeline estimate_FR_2\/Pack_outputs {} {}",
+      "pipeline estimate_FR_2\/Pack_outputs {} {}",
+      "unroll estimate_FR_2\/Pack_outputs {{factor 24}} {}",
+      "array_partition estimate_FR_2 {{partition positionBooleanCmd} {variable positionBooleanTextRequiredcnt} {cyclic positionBoolean0type} {factor 24} {dim 1}} {}",
+      "array_partition estimate_FR_2 {{partition positionBooleanCmd} {variable positionBooleanTextRequiredFR} {cyclic positionBoolean0type} {factor 24} {dim 1}} {}"
+    ]
+  },
+  "Args": {
+    "inputs": {
+      "index": "0",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "int",
+        "dataWidth": "32",
+        "arraySizes": ["96"]
+      }
+    },
+    "counts": {
+      "index": "1",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "int",
+        "dataWidth": "32",
+        "arraySizes": ["24"]
+      }
+    },
+    "outputs": {
+      "index": "2",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "int",
+        "dataWidth": "32",
+        "arraySizes": ["24"]
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "8",
+    "Uncertainty": "1.25"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "estimate_FR_2",
+    "Version": "1.0",
+    "DisplayName": "Estimate_fr_2",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/..\/XilinxDocs\/MSc_project-main\/Vivado_hls\/Compiled_Code\/BIN_MUL_FIX_v3.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/estimate_FR_2_AXILiteS_s_axi.vhd",
+      "impl\/vhdl\/estimate_FR_2_mux_42_6_1_1.vhd",
+      "impl\/vhdl\/estimate_FR_2.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/estimate_FR_2_AXILiteS_s_axi.v",
+      "impl\/verilog\/estimate_FR_2_mux_42_6_1_1.v",
+      "impl\/verilog\/estimate_FR_2.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/estimate_FR_2_v1_0\/data\/estimate_FR_2.mdd",
+      "impl\/misc\/drivers\/estimate_FR_2_v1_0\/data\/estimate_FR_2.tcl",
+      "impl\/misc\/drivers\/estimate_FR_2_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/estimate_FR_2_v1_0\/src\/xestimate_fr_2.c",
+      "impl\/misc\/drivers\/estimate_FR_2_v1_0\/src\/xestimate_fr_2.h",
+      "impl\/misc\/drivers\/estimate_FR_2_v1_0\/src\/xestimate_fr_2_hw.h",
+      "impl\/misc\/drivers\/estimate_FR_2_v1_0\/src\/xestimate_fr_2_linux.c",
+      "impl\/misc\/drivers\/estimate_FR_2_v1_0\/src\/xestimate_fr_2_sinit.c"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "\/home\/e2\/Documents\/BIN\/unroll_24\/.autopilot\/db\/estimate_FR_2.design.xml",
+    "DebugDir": "\/home\/e2\/Documents\/BIN\/unroll_24\/.debug",
+    "ProtoInst": ["\/home\/e2\/Documents\/BIN\/unroll_24\/.debug\/estimate_FR_2.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "s_axi_AXILiteS",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "ctype": {"INTERRUPT": {"Type": "bool"}},
+      "bundle_name": "AXILiteS",
+      "bundle_role": "interrupt"
+    },
+    "s_axi_AXILiteS": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_AXILiteS",
+      "param_prefix": "C_S_AXI_AXILITES",
+      "addr_bits": "10",
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Control signals",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "24",
+              "name": "RESERVED_2",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Global Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Status Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x190",
+          "name": "counts_0_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_0_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_0_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_0_i"
+            }]
+        },
+        {
+          "offset": "0x198",
+          "name": "counts_0_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_0_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_0_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_0_o"
+            }]
+        },
+        {
+          "offset": "0x19c",
+          "name": "counts_0_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_0_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_0_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_0_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x1a0",
+          "name": "counts_1_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_1_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_1_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_1_i"
+            }]
+        },
+        {
+          "offset": "0x1a8",
+          "name": "counts_1_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_1_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_1_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_1_o"
+            }]
+        },
+        {
+          "offset": "0x1ac",
+          "name": "counts_1_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_1_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_1_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_1_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x1b0",
+          "name": "counts_2_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_2_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_2_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_2_i"
+            }]
+        },
+        {
+          "offset": "0x1b8",
+          "name": "counts_2_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_2_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_2_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_2_o"
+            }]
+        },
+        {
+          "offset": "0x1bc",
+          "name": "counts_2_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_2_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_2_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_2_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x1c0",
+          "name": "counts_3_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_3_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_3_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_3_i"
+            }]
+        },
+        {
+          "offset": "0x1c8",
+          "name": "counts_3_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_3_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_3_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_3_o"
+            }]
+        },
+        {
+          "offset": "0x1cc",
+          "name": "counts_3_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_3_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_3_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_3_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x1d0",
+          "name": "counts_4_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_4_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_4_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_4_i"
+            }]
+        },
+        {
+          "offset": "0x1d8",
+          "name": "counts_4_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_4_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_4_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_4_o"
+            }]
+        },
+        {
+          "offset": "0x1dc",
+          "name": "counts_4_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_4_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_4_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_4_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x1e0",
+          "name": "counts_5_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_5_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_5_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_5_i"
+            }]
+        },
+        {
+          "offset": "0x1e8",
+          "name": "counts_5_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_5_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_5_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_5_o"
+            }]
+        },
+        {
+          "offset": "0x1ec",
+          "name": "counts_5_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_5_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_5_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_5_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x1f0",
+          "name": "counts_6_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_6_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_6_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_6_i"
+            }]
+        },
+        {
+          "offset": "0x1f8",
+          "name": "counts_6_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_6_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_6_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_6_o"
+            }]
+        },
+        {
+          "offset": "0x1fc",
+          "name": "counts_6_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_6_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_6_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_6_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x200",
+          "name": "counts_7_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_7_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_7_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_7_i"
+            }]
+        },
+        {
+          "offset": "0x208",
+          "name": "counts_7_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_7_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_7_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_7_o"
+            }]
+        },
+        {
+          "offset": "0x20c",
+          "name": "counts_7_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_7_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_7_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_7_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x210",
+          "name": "counts_8_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_8_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_8_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_8_i"
+            }]
+        },
+        {
+          "offset": "0x218",
+          "name": "counts_8_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_8_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_8_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_8_o"
+            }]
+        },
+        {
+          "offset": "0x21c",
+          "name": "counts_8_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_8_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_8_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_8_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x220",
+          "name": "counts_9_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_9_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_9_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_9_i"
+            }]
+        },
+        {
+          "offset": "0x228",
+          "name": "counts_9_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_9_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_9_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_9_o"
+            }]
+        },
+        {
+          "offset": "0x22c",
+          "name": "counts_9_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_9_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_9_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_9_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x230",
+          "name": "counts_10_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_10_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_10_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_10_i"
+            }]
+        },
+        {
+          "offset": "0x238",
+          "name": "counts_10_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_10_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_10_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_10_o"
+            }]
+        },
+        {
+          "offset": "0x23c",
+          "name": "counts_10_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_10_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_10_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_10_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x240",
+          "name": "counts_11_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_11_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_11_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_11_i"
+            }]
+        },
+        {
+          "offset": "0x248",
+          "name": "counts_11_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_11_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_11_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_11_o"
+            }]
+        },
+        {
+          "offset": "0x24c",
+          "name": "counts_11_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_11_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_11_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_11_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x250",
+          "name": "counts_12_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_12_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_12_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_12_i"
+            }]
+        },
+        {
+          "offset": "0x258",
+          "name": "counts_12_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_12_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_12_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_12_o"
+            }]
+        },
+        {
+          "offset": "0x25c",
+          "name": "counts_12_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_12_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_12_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_12_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x260",
+          "name": "counts_13_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_13_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_13_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_13_i"
+            }]
+        },
+        {
+          "offset": "0x268",
+          "name": "counts_13_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_13_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_13_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_13_o"
+            }]
+        },
+        {
+          "offset": "0x26c",
+          "name": "counts_13_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_13_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_13_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_13_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x270",
+          "name": "counts_14_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_14_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_14_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_14_i"
+            }]
+        },
+        {
+          "offset": "0x278",
+          "name": "counts_14_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_14_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_14_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_14_o"
+            }]
+        },
+        {
+          "offset": "0x27c",
+          "name": "counts_14_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_14_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_14_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_14_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x280",
+          "name": "counts_15_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_15_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_15_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_15_i"
+            }]
+        },
+        {
+          "offset": "0x288",
+          "name": "counts_15_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_15_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_15_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_15_o"
+            }]
+        },
+        {
+          "offset": "0x28c",
+          "name": "counts_15_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_15_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_15_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_15_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x290",
+          "name": "counts_16_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_16_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_16_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_16_i"
+            }]
+        },
+        {
+          "offset": "0x298",
+          "name": "counts_16_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_16_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_16_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_16_o"
+            }]
+        },
+        {
+          "offset": "0x29c",
+          "name": "counts_16_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_16_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_16_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_16_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x2a0",
+          "name": "counts_17_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_17_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_17_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_17_i"
+            }]
+        },
+        {
+          "offset": "0x2a8",
+          "name": "counts_17_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_17_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_17_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_17_o"
+            }]
+        },
+        {
+          "offset": "0x2ac",
+          "name": "counts_17_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_17_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_17_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_17_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x2b0",
+          "name": "counts_18_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_18_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_18_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_18_i"
+            }]
+        },
+        {
+          "offset": "0x2b8",
+          "name": "counts_18_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_18_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_18_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_18_o"
+            }]
+        },
+        {
+          "offset": "0x2bc",
+          "name": "counts_18_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_18_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_18_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_18_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x2c0",
+          "name": "counts_19_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_19_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_19_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_19_i"
+            }]
+        },
+        {
+          "offset": "0x2c8",
+          "name": "counts_19_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_19_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_19_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_19_o"
+            }]
+        },
+        {
+          "offset": "0x2cc",
+          "name": "counts_19_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_19_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_19_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_19_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x2d0",
+          "name": "counts_20_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_20_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_20_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_20_i"
+            }]
+        },
+        {
+          "offset": "0x2d8",
+          "name": "counts_20_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_20_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_20_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_20_o"
+            }]
+        },
+        {
+          "offset": "0x2dc",
+          "name": "counts_20_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_20_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_20_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_20_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x2e0",
+          "name": "counts_21_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_21_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_21_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_21_i"
+            }]
+        },
+        {
+          "offset": "0x2e8",
+          "name": "counts_21_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_21_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_21_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_21_o"
+            }]
+        },
+        {
+          "offset": "0x2ec",
+          "name": "counts_21_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_21_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_21_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_21_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x2f0",
+          "name": "counts_22_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_22_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_22_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_22_i"
+            }]
+        },
+        {
+          "offset": "0x2f8",
+          "name": "counts_22_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_22_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_22_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_22_o"
+            }]
+        },
+        {
+          "offset": "0x2fc",
+          "name": "counts_22_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_22_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_22_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_22_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x300",
+          "name": "counts_23_i",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_23_i",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_23_i",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_23_i"
+            }]
+        },
+        {
+          "offset": "0x308",
+          "name": "counts_23_o",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of counts_23_o",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "counts_23_o",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of counts_23_o"
+            }]
+        },
+        {
+          "offset": "0x30c",
+          "name": "counts_23_o_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of counts_23_o",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "counts_23_o_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal counts_23_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x310",
+          "name": "outputs_0",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_0",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_0",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_0"
+            }]
+        },
+        {
+          "offset": "0x314",
+          "name": "outputs_0_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_0",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_0_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_0_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x318",
+          "name": "outputs_1",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_1",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_1",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_1"
+            }]
+        },
+        {
+          "offset": "0x31c",
+          "name": "outputs_1_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_1",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_1_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_1_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x320",
+          "name": "outputs_2",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_2",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_2",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_2"
+            }]
+        },
+        {
+          "offset": "0x324",
+          "name": "outputs_2_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_2",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_2_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_2_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x328",
+          "name": "outputs_3",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_3",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_3",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_3"
+            }]
+        },
+        {
+          "offset": "0x32c",
+          "name": "outputs_3_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_3",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_3_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_3_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x330",
+          "name": "outputs_4",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_4",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_4",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_4"
+            }]
+        },
+        {
+          "offset": "0x334",
+          "name": "outputs_4_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_4",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_4_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_4_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x338",
+          "name": "outputs_5",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_5",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_5",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_5"
+            }]
+        },
+        {
+          "offset": "0x33c",
+          "name": "outputs_5_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_5",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_5_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_5_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x340",
+          "name": "outputs_6",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_6",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_6",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_6"
+            }]
+        },
+        {
+          "offset": "0x344",
+          "name": "outputs_6_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_6",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_6_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_6_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x348",
+          "name": "outputs_7",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_7",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_7",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_7"
+            }]
+        },
+        {
+          "offset": "0x34c",
+          "name": "outputs_7_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_7",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_7_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_7_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x350",
+          "name": "outputs_8",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_8",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_8",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_8"
+            }]
+        },
+        {
+          "offset": "0x354",
+          "name": "outputs_8_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_8",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_8_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_8_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x358",
+          "name": "outputs_9",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_9",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_9",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_9"
+            }]
+        },
+        {
+          "offset": "0x35c",
+          "name": "outputs_9_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_9",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_9_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_9_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x360",
+          "name": "outputs_10",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_10",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_10",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_10"
+            }]
+        },
+        {
+          "offset": "0x364",
+          "name": "outputs_10_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_10",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_10_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_10_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x368",
+          "name": "outputs_11",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_11",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_11",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_11"
+            }]
+        },
+        {
+          "offset": "0x36c",
+          "name": "outputs_11_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_11",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_11_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_11_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x370",
+          "name": "outputs_12",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_12",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_12",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_12"
+            }]
+        },
+        {
+          "offset": "0x374",
+          "name": "outputs_12_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_12",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_12_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_12_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x378",
+          "name": "outputs_13",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_13",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_13",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_13"
+            }]
+        },
+        {
+          "offset": "0x37c",
+          "name": "outputs_13_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_13",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_13_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_13_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x380",
+          "name": "outputs_14",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_14",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_14",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_14"
+            }]
+        },
+        {
+          "offset": "0x384",
+          "name": "outputs_14_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_14",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_14_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_14_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x388",
+          "name": "outputs_15",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_15",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_15",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_15"
+            }]
+        },
+        {
+          "offset": "0x38c",
+          "name": "outputs_15_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_15",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_15_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_15_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x390",
+          "name": "outputs_16",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_16",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_16",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_16"
+            }]
+        },
+        {
+          "offset": "0x394",
+          "name": "outputs_16_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_16",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_16_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_16_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x398",
+          "name": "outputs_17",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_17",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_17",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_17"
+            }]
+        },
+        {
+          "offset": "0x39c",
+          "name": "outputs_17_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_17",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_17_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_17_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x3a0",
+          "name": "outputs_18",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_18",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_18",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_18"
+            }]
+        },
+        {
+          "offset": "0x3a4",
+          "name": "outputs_18_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_18",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_18_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_18_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x3a8",
+          "name": "outputs_19",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_19",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_19",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_19"
+            }]
+        },
+        {
+          "offset": "0x3ac",
+          "name": "outputs_19_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_19",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_19_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_19_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x3b0",
+          "name": "outputs_20",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_20",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_20",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_20"
+            }]
+        },
+        {
+          "offset": "0x3b4",
+          "name": "outputs_20_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_20",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_20_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_20_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x3b8",
+          "name": "outputs_21",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_21",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_21",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_21"
+            }]
+        },
+        {
+          "offset": "0x3bc",
+          "name": "outputs_21_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_21",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_21_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_21_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x3c0",
+          "name": "outputs_22",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_22",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_22",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_22"
+            }]
+        },
+        {
+          "offset": "0x3c4",
+          "name": "outputs_22_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_22",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_22_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_22_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x3c8",
+          "name": "outputs_23",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of outputs_23",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "outputs_23",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of outputs_23"
+            }]
+        },
+        {
+          "offset": "0x3cc",
+          "name": "outputs_23_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of outputs_23",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "outputs_23_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal outputs_23_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
+      "memories": {
+        "inputs_0": {
+          "offset": "16",
+          "range": "16"
+        },
+        "inputs_1": {
+          "offset": "32",
+          "range": "16"
+        },
+        "inputs_2": {
+          "offset": "48",
+          "range": "16"
+        },
+        "inputs_3": {
+          "offset": "64",
+          "range": "16"
+        },
+        "inputs_4": {
+          "offset": "80",
+          "range": "16"
+        },
+        "inputs_5": {
+          "offset": "96",
+          "range": "16"
+        },
+        "inputs_6": {
+          "offset": "112",
+          "range": "16"
+        },
+        "inputs_7": {
+          "offset": "128",
+          "range": "16"
+        },
+        "inputs_8": {
+          "offset": "144",
+          "range": "16"
+        },
+        "inputs_9": {
+          "offset": "160",
+          "range": "16"
+        },
+        "inputs_10": {
+          "offset": "176",
+          "range": "16"
+        },
+        "inputs_11": {
+          "offset": "192",
+          "range": "16"
+        },
+        "inputs_12": {
+          "offset": "208",
+          "range": "16"
+        },
+        "inputs_13": {
+          "offset": "224",
+          "range": "16"
+        },
+        "inputs_14": {
+          "offset": "240",
+          "range": "16"
+        },
+        "inputs_15": {
+          "offset": "256",
+          "range": "16"
+        },
+        "inputs_16": {
+          "offset": "272",
+          "range": "16"
+        },
+        "inputs_17": {
+          "offset": "288",
+          "range": "16"
+        },
+        "inputs_18": {
+          "offset": "304",
+          "range": "16"
+        },
+        "inputs_19": {
+          "offset": "320",
+          "range": "16"
+        },
+        "inputs_20": {
+          "offset": "336",
+          "range": "16"
+        },
+        "inputs_21": {
+          "offset": "352",
+          "range": "16"
+        },
+        "inputs_22": {
+          "offset": "368",
+          "range": "16"
+        },
+        "inputs_23": {
+          "offset": "384",
+          "range": "16"
+        }
+      },
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "10"
+        },
+        "WDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "10"
+        },
+        "RDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "10",
+        "AWADDR": "10",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
+    }
+  },
+  "RtlPorts": {
+    "s_axi_AXILiteS_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWADDR": {
+      "dir": "in",
+      "width": "10"
+    },
+    "s_axi_AXILiteS_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_AXILiteS_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARADDR": {
+      "dir": "in",
+      "width": "10"
+    },
+    "s_axi_AXILiteS_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_AXILiteS_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "estimate_FR_2"},
+    "Info": {"estimate_FR_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"estimate_FR_2": {
+        "Latency": {
+          "LatencyBest": "8",
+          "LatencyAvg": "8",
+          "LatencyWorst": "8",
+          "PipelineII": "9",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.535"
+        },
+        "Loops": [{
+            "Name": "FR_estimation",
+            "TripCount": "4",
+            "Latency": "5",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "BRAM_18K": "48",
+          "FF": "8013",
+          "LUT": "23456",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "estimate_FR_2",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2021-08-18 15:45:31 BST",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2019.1"
+  }
+}
