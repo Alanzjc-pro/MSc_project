@@ -1,0 +1,149 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 800 ; free virtual = 6176
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 800 ; free virtual = 6176
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 792 ; free virtual = 6168
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 788 ; free virtual = 6165
+INFO: [XFORM 203-501] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2' partially with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'FR_estimation' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:19) in function 'estimate_FR_2' partially with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2' partially with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'counts' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'FR.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12:40) to (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12:35) in function 'estimate_FR_2'... converting 13 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 762 ; free virtual = 6140
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 761 ; free virtual = 6139
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_FR_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Unpack_count'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('cnt_0_V_addr_5_write_ln13', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:13) of variable 'trunc_ln301_2', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:13 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'cnt_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'FR_estimation'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('cnt_0_V_addr_1_write_ln23', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23) of variable 'add_ln700', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:23 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'cnt_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Pack_outputs'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('cnt_0_V_load_6', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:32) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'cnt_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.33 seconds; current allocated memory: 114.077 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.67 seconds; current allocated memory: 116.055 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_7' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_7' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_3' to 's_axilite & ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 739 ; free virtual = 6116
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 739 ; free virtual = 6116
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 731 ; free virtual = 6108
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 726 ; free virtual = 6104
+INFO: [XFORM 203-501] Unrolling loop 'Unpack_count' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:12) in function 'estimate_FR_2' partially with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'FR_estimation' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:19) in function 'estimate_FR_2' partially with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'Pack_outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:31) in function 'estimate_FR_2' partially with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 'counts' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'inputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'outputs' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:4) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'cnt.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'FR.V' (XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:8) in dimension 1 with a cyclic factor 8.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 699 ; free virtual = 6078
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 829.277 ; gain = 128.000 ; free physical = 698 ; free virtual = 6077
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'estimate_FR_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Unpack_count'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('cnt_0_V_addr_2_write_ln13', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:13) of variable 'trunc_ln301_11', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:13 on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'cnt_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'FR_estimation'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('cnt_0_V_load_2', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:26) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'cnt_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Pack_outputs'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('cnt_0_V_load_4', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:32) on array 'cnt[0].V', XilinxDocs/MSc_project-main/Vivado_hls/Compiled_Code/BIN_MUL_FIX_v3.cpp:7 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'cnt_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.56 seconds; current allocated memory: 114.966 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 117.192 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'estimate_FR_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/inputs_7' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/counts_7' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_3' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_4' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_5' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_6' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'estimate_FR_2/outputs_7' to 's_axilite & ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="estimate_FR_2" xd:componentRef="estimate_FR_2" xd:initiationInterval="46" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x40" xd:arraySize="89" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x80" xd:arraySize="89" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0xC0" xd:arraySize="89" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x100" xd:arraySize="89" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x140" xd:arraySize="89" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x180" xd:arraySize="89" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x1C0" xd:arraySize="89" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs[]" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x200" xd:arraySize="89" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x240" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x250" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x260" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x270" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x280" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x290" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x2A0" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="counts[]" xd:originalName="counts" xd:direction="inout" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x2B0" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x2C0" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x2D0" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x2E0" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x2F0" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x300" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x310" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x320" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputs[]" xd:originalName="outputs" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x330" xd:arraySize="17" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="45" xd:worst-case="45" xd:average-case="45"/>
+  <xd:resourceEstimates xd:LUT="3807" xd:FF="2440" xd:BRAM="56" xd:DSP="0"/>
+</xd:acceleratorMap>
