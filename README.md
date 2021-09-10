@@ -2,7 +2,7 @@
 * Title: **Brain-Machine Interface firing rate estimation and neural decoding**
 * Fancy poster and detailed report can be found in the submission folder
 * The proposed BMI system can be seen in [BMIFlow](https://user-images.githubusercontent.com/72474193/132912148-4448cd21-71c4-4799-8909-797a6a0b0e36.png)
-* Main Outcome: The proposed PISI firing rate method consumes only 21 mW and take 400 clock clyles in Xilinx FPGA, which reduces the data rate by ten thousands times and achieves 0.7 correlation coefficients in the prediction of position with the use of simple Bayesian decoders.
+* Main Outcome: The proposed PISI firing rate method consumes only 21 mW and take 400 clock clyles in Xilinx FPGA, which reduces the data rate by ten thousands times. In the meantime, it reaches 0.7 correlation coefficients in the prediction of position by applying simple Bayesian decoders.
 
 
 
