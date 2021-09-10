@@ -15,6 +15,7 @@
 * Function Testing: Huffman, neural decoder, data organisation and normalisation
 * Firing Rate Estimation: synthetic testing, BAKs, Guassian Kernel and PISI
 * WF and KF : parameter training and prediciton testing
+* Simulink: Floating-point and fixed-point PISI model simulation with data provided.
 
 ## Vivado_HLS
 * Floating-point for both PISI and binning
