@@ -1,8 +1,7 @@
 # MSc_project
 * Title: **Brain-Machine Interface firing rate estimation and neural decoding**
 * Fancy poster and detailed report can be found in the submission folder
-* The proposed BMI system can be seen below:
-
+* The proposed BMI system can be seen below
 [BMIFlow 07 20 03](https://user-images.githubusercontent.com/72474193/132912148-4448cd21-71c4-4799-8909-797a6a0b0e36.png)
 
 
